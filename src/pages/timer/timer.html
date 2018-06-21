@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Timer <span class="axon">Axon</span></ion-title>
+  </ion-navbar>
+</ion-header>
+  <ion-content padding>
+    <ion-searchbar
+      [(ngModel)]="myInput"
+      placeholder="Поиск"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+
+    <div class="chip-timer">
+    <ion-chip class="c-amethyst">
+      <ion-label>Прес</ion-label>
+    </ion-chip>
+
+    <ion-chip class="c-blue">
+      <ion-label>Приседания</ion-label>
+    </ion-chip>
+
+    <ion-chip class="c-orange">
+      <ion-label>Отжимания</ion-label>
+    </ion-chip>
+
+    <ion-chip  class="c-cobalt">
+      <ion-label>Кардио</ion-label>
+    </ion-chip>
+    </div>
+
+    <div class="form-timer">
+      <form  (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <ion-row>
+<ion-col col-6 >
+  <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Подготовка</ion-label>
+        <ion-datetime displayFormat="m:s" doneText="Выбрать" cancelText="Отмена" name="prepareTime" [(ngModel)]="this.timerProvider.prepareTime.base"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Работа</ion-label>
+        <ion-datetime displayFormat="m:s" name="approachTime" [(ngModel)]="this.timerProvider.approachTime.base"></ion-datetime>
+      </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Отдых</ion-label>
+          <ion-datetime displayFormat="m:s" name="relaxTime" [(ngModel)]="this.timerProvider.relaxTime.base"></ion-datetime>
+        </ion-item>
+  </ion-list>
+</ion-col>
+
+      <ion-col col-6>
+        <div class="form-timer__imgTimer"></div>
+        <ion-item>s
+          <ion-label stacked>Циклы</ion-label>
+          <ion-datetime displayFormat="m" minuteValues="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20]" name="cycles" [(ngModel)]="this.timerProvider.cycles.base"></ion-datetime>
+        </ion-item>
+
+    </ion-col>
+
+      <div ion-row col-12 justify-content-center>
+        <button [ngClass]="{'play-btn': !this.timerProvider.isPlaying, 'pause-btn': this.timerProvider.isPlaying}" class="btn button sp-btn form-timer__control-btn control-btn" type="submit" #startBtn>
+          <span class="in-btn glyphicon glyphicon-pause"></span>
+        </button>
+      </div>
+    </ion-row>
+      </form>
+    </div>
+</ion-content>

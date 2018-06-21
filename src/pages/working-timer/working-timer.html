@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Timer <span class="axon">Axon</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<div class="changeStatusBg" [ngClass]="{'changeStatusBg': this.timerProvider.flashAnimate}">
+  {{this.timerProvider.status}}
+</div>
+
+<ion-content padding>
+  <div class="m-wrap tx">
+    <div class="o-watch-wrap">
+      <div class="watch-ui" #watchUi>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div ion-row col-12 justify-content-center class="timer-working__status">
+                {{this.timerProvider.status}}
+              </div>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+        <div class="o-ring">
+          <div class="o-timer-wrap">
+            <div class="ring-wrap">
+              <svg class="c-t" width="200" height="200">
+                <circle class="c-c" cx="90" cy="100" r="97.5" transform="rotate(-90, 95, 95)" #cc/>
+              </svg>
+            </div>
+            <div class="o-timer">
+              <span class="t-time" #tTime>{{this.timerProvider.timer.min + ':' + this.timerProvider.timer.sec}}</span>
+              <span class="oop" >{{'Цикл ' + this.timerProvider.timer.mmin}}</span>
+            </div>
+          </div>
+          <div class="t-options">
+                    <span class="t-options-time">
+					<span class="btn b-dec o-opt-btn b-revc glyphicon glyphicon-play"></span>
+                    <span class="o-opt-btn display"></span>
+                    <span class="btn b-inc o-opt-btn glyphicon glyphicon-play"></span>
+                    </span>
+          </div>
+        </div>
+        <div class="o-controllers">
+          <button class="btn button sp-btn repeat-btn">
+            <span class="glyphicon glyphicon-repeat"></span>
+          </button>
+          <button class="btn button sp-btn pause-btn control-btn" (click)="pause()" #controlBtn id="controlBtn">
+            <span class="in-btn glyphicon glyphicon-pause"></span>
+          </button>
+          <button class="btn button sp-btn menu-btn">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

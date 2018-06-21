@@ -1,0 +1,19 @@
+.form-timer {
+  &__imgTimer {
+    background: url("../assets/icon/timer.svg") 50% no-repeat;
+    background-size: 83%;
+    width: 140px;
+    height: 140px;
+    margin-top: 13px;
+  }
+  .label {
+    font-family: OpenSans-Light;
+    font-size: 14px;
+  }
+  &__control-btn {
+    margin-top: -40px !important;
+  }
+}
+.chip-timer {
+  padding-left: 16px;
+}

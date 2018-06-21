@@ -1,0 +1,168 @@
+
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.axon{
+  color: #f6ed5a;
+}
+.toolbar-background-md{
+  background: rgba(0, 0, 0, 0.33);
+}
+.toolbar-title-md{
+  color: #ffffff;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+  color: #ffffff;
+}
+.item-md {
+  background-color: $background-app;
+  color: #ffffff;
+}
+.content {
+  background: #302b63; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #302b63 0%, #302b63 57%, #24243e 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #302b63 0%,#302b63 57%,#24243e 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #302b63 0%,#302b63 57%,#24243e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#302b63', endColorstr='#24243e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.changeStatus{
+  background: #0575E6 !important;; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #021B79, #0575E6) !important;/* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #021B79, #0575E6) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: 1s !important;
+}
+
+.searchbar-md .searchbar-input {
+  background: transparent;
+  box-shadow: none;
+  color: #ffffff;
+}
+.c-amethyst{
+  background: #846db1;
+}
+.c-blue{
+  background: #3c67b0;
+}
+.c-orange{
+  background: #f6705a;
+}
+.c-cobalt {
+  background: #4758a5;
+}
+.btn-StartTimer {
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  background-color: rgb(57, 50, 121);
+}
+.list-md .item-block .item-inner {
+  border: none;
+}
+.item-md.item-block .item-inner{
+  border: none;
+}
+
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  background-color: #002a3e;
+}
+
+.flb {
+  background-color: #4758a5;
+  height:100%;
+  width:100%;
+  animation: pulse 1s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aligner-item {
+  max-width: 50%;
+}
+.Aligner-item--top {
+  align-self: flex-start;
+}
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+#custom-overlay img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  animation: animation 3100ms linear infinite both;
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+.animation-target {
+  -webkit-animation: animation 2800ms linear infinite both;
+  animation: animation 2800ms linear infinite both;
+}
+
+/* Generated with Bounce.js. Edit at https://goo.gl/B1bNzi */
+
+.splash {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2d295a;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    } 100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+}
