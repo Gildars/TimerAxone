@@ -1,0 +1,4 @@
+#Fri Jun 22 01:33:06 EEST 2018
+base.0=C\:\\Users\\pavli\\Desktop\\ANGULAR PROJECTS\\Project SportTimer\\sportsTimer\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\Users\\pavli\\Desktop\\ANGULAR PROJECTS\\Project SportTimer\\sportsTimer\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
